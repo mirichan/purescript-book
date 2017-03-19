@@ -1,8 +1,14 @@
 module MiscExercises where
 
+<<<<<<< HEAD
 import Prelude (($), (+), (-))
 import Data.Ord (abs)
 import Data.Array (head, null)
+=======
+import Prelude
+import Data.Ord (abs)
+import Data.Array (head, null, filter)
+>>>>>>> 120cee0484f2372bd148392c3748284aa7988537
 import Data.Array.Partial (tail)
 import Data.Maybe (Maybe(..))
 import Partial.Unsafe (unsafePartial)
@@ -33,3 +39,17 @@ evenCount arr = case head arr of
         if isEven i then 1 + evenCount remaining
         else evenCount remaining
         where remaining = unsafePartial $ tail arr
+
+square :: Int -> Int
+square n = n * n
+
+squareAll :: Array Int -> Array Int
+squareAll a = square <$> a
+
+isNonNegative :: Int -> Boolean
+isNonNegative n = n >= 0
+
+infixr 0 filter as <$?>
+
+removeNegatives :: Array Int -> Array Int
+removeNegatives a = isNonNegative <$?> a
