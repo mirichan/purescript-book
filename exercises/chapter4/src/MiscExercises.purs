@@ -1,14 +1,8 @@
 module MiscExercises where
 
-<<<<<<< HEAD
-import Prelude (($), (+), (-))
-import Data.Ord (abs)
-import Data.Array (head, null)
-=======
 import Prelude
 import Data.Ord (abs)
 import Data.Array (head, null, filter)
->>>>>>> 120cee0484f2372bd148392c3748284aa7988537
 import Data.Array.Partial (tail)
 import Data.Maybe (Maybe(..))
 import Partial.Unsafe (unsafePartial)
